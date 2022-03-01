@@ -1,0 +1,83 @@
+.container {
+   text-align: center;
+}
+.hidden {
+   display: none !important;
+}
+
+.final-dead {
+   position: absolute;
+}
+.la-parca {
+   height: 0px;
+   width: 0px;
+   transform: translate(300px, -400px);
+   .la-parca__img {
+      -webkit-filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px -1px 0 white);
+      filter: drop-shadow(2px 1px 0 white) drop-shadow(-1px -1px 0 white);
+   }
+}
+
+.flex-container {
+   display: flex;
+   flex-wrap: wrap;
+
+   justify-content: center;
+   align-items: stretch;
+}
+
+.flex-item {
+   margin: 5px;
+   height: 200px;
+
+   text-align: center;
+}
+
+.dibujo-ahorcado {
+   background-color: var(--bg);
+   color: white;
+   width: 350px;
+   height: 350px;
+   padding: 0px;
+}
+.palabras {
+   background-color: var(--bg);
+   flex-grow: 1;
+   max-width: max-content;
+   min-width: 500px;
+
+   height: auto;
+
+   min-height: 300px;
+}
+
+.defeat-popup {
+   background-color: red !important;
+}
+
+.parte-inferior {
+   width: 100%;
+   min-height: 100px;
+
+   margin-top: 20px;
+}
+
+@media (max-width: 968px) {
+   .palabras {
+      min-width: 100%;
+   }
+}
+
+@media (max-width: 500px) {
+   .dibujo-ahorcado {
+      height: 250px;
+      width: 250px;
+   }
+}
+
+// Esconde la parca para dispositivos donde no se va a ver
+@media (max-width: 630px) {
+   .la-parca__img {
+      display: none;
+   }
+}

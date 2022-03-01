@@ -1,0 +1,12 @@
+<div class="letra-juego">
+   <div *ngIf="letraPertenece()">
+      <div class="letra letra-ok">
+         {{letra}}
+      </div>
+   </div>
+   <div *ngIf="!letraPertenece()">
+      <div class="letra letra-desconocida">
+         _
+      </div>
+   </div>
+</div>

@@ -1,0 +1,30 @@
+<div (click)="selectDificulty()" [ngClass]="selectorDificultad()">
+   <mat-card class="difficulty-card">
+      <div class="card-wrapper">
+         <div class="main-difficulty">
+            <div class="left stars">
+               <mat-icon
+                  *ngFor="let estrella of fullStars()"
+                  aria-hidden="false"
+                  aria-label="Example home icon"
+                  >star</mat-icon
+               >
+               <mat-icon
+                  *ngFor="let estrella of emptyStars()"
+                  aria-hidden="false"
+                  aria-label="Example home icon"
+                  >star_border</mat-icon
+               >
+            </div>
+
+            <div class="center difficulty">
+               <span>{{dificultad}}</span>
+            </div>
+         </div>
+
+         <div class="information-text">
+            {{texto}}
+         </div>
+      </div>
+   </mat-card>
+</div>

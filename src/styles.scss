@@ -1,0 +1,136 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// GLOBAL
+$global-theme-primary: mat-palette($mat-indigo);
+
+// ------------------------------------------------------ //
+//                LIGHT THEME VARIABLES                   //
+// ------------------------------------------------------ //
+$light-theme-primary: mat-palette($mat-indigo);
+$light-theme-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-theme-warn: mat-palette($mat-red);
+
+// Theme
+$light-theme: mat-light-theme(
+   (
+      color: (
+         primary: $light-theme-primary,
+         accent: $light-theme-accent,
+         warn: $light-theme-warn,
+      ),
+   )
+);
+// ------------------------------------------------------ //
+//                DARK THEME VARIABLES                    //
+// ------------------------------------------------------ //
+$dark-theme-primary: mat-palette($mat-light-blue);
+$dark-theme-accent: mat-palette($mat-pink, A200, A100, A400);
+$dark-theme-warn: mat-palette($mat-red);
+
+// Theme
+$dark-theme: mat-dark-theme(
+   (
+      color: (
+         primary: $dark-theme-primary,
+         accent: $dark-theme-accent,
+         warn: $dark-theme-warn,
+      ),
+   )
+);
+
+// &{
+//     --html-bg: #ebe9e9;
+// }
+
+// Include light theme by default
+.light-theme {
+   @include angular-material-theme($light-theme);
+   $bg_palette: map-get($light-theme, background);
+   $bg: map-get($bg_palette, background);
+   --bg: white;
+   --bg-contrast: #eeeeee;
+   --bg-card-contrast: #e4e4e4;
+   --html-bg: #ebe9e9;
+   --primary: #5b00bd;
+
+   color: black;
+   --opposite: black;
+}
+
+// dark theme
+.dark-theme {
+   @include angular-material-theme($dark-theme);
+   $bg_palette: map-get($dark-theme, background);
+
+   $bg: map-get($bg_palette, background);
+   --bg: #{$bg};
+   --bg-contrast: #212a2f;
+   --bg-card-contrast: #4e4d4d;
+   --html-bg: #171f24;
+   --primary: #06a9f4;
+
+   color: white;
+   --opposite: white;
+}
+
+/* You can add global styles to this file, and also import other style files */
+html {
+   min-height: 100vh;
+   background: var(--html-bg);
+
+   body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+         Geneva, Verdana, sans-serif;
+      font-family: Roboto, 'Helvetica Neue', sans-serif;
+      margin: 0px;
+      min-height: 100vh;
+      height: 100% !important;
+      background: var(--html-bg);
+   }
+}
+
+.card {
+   /* Add shadows to create the "card" effect */
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.shadow:hover {
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+   background-color: red;
+}
+
+/* Add some padding inside the card container */
+.dev-container {
+   padding: 2px 16px;
+}
+
+.mat-snack-bar-container {
+   background-color: var(--primary);
+   color: white;
+   .mat-simple-snackbar-action {
+      color: rgb(176, 177, 179);
+
+      .cdk-focused {
+         background-color: var(--primary) !important;
+      }
+   }
+}
+.ahorcado-img__dark-theme {
+   filter: invert(100%);
+   mix-blend-mode: screen !important;
+}
+
+/* SWAL colors */
+.swal2-title {
+   color: var(--opposite) !important;
+}
+.swal2-html-container {
+   color: var(--opposite) !important;
+}
+.swal2-confirm {
+   background-color: var(--primary) !important;
+   color: white !important;
+}

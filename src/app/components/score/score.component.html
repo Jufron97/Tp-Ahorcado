@@ -1,0 +1,21 @@
+<div class="container">
+   <div class="right button">
+      <button mat-stroked-button class="btn" (click)="resetScore()">Reiniciar puntajes</button>
+   </div>
+
+   <div *ngIf="scoresBoard.length > 0">
+      <div *ngFor="let board of scoresBoard" class="scoreBoard">
+         <app-score-table [board]="board"> </app-score-table>
+      </div>
+   </div>
+
+   <div *ngIf="scoresBoard.length == 0" class="center">
+      <br /><br /><br /><br />
+
+      <mat-card class="center noScoreBoard">
+         <p>
+            No hay puntajes. Seleccione un nombre para empezar a guardar registros!
+         </p>
+      </mat-card>
+   </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="keyboard-base">
+   <div class="">
+      <div class="keyboard-row keyboard-row-first">
+         <div *ngFor="let letter of 'qwertyuiop'.split('')">
+            <app-teclado-letra [letra]="letter"></app-teclado-letra>
+         </div>
+      </div>
+      <div class="keyboard-row keyboard-row-second">
+         <div *ngFor="let letter of 'asdfghjklñ'.split('')">
+            <app-teclado-letra [letra]="letter"></app-teclado-letra>
+         </div>
+      </div>
+      <div class="keyboard-row keyboard-row-third">
+         <div *ngFor="let letter of 'zxcvbnm'.split('')">
+            <app-teclado-letra [letra]="letter"></app-teclado-letra>
+         </div>
+      </div>
+   </div>
+</div>

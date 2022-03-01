@@ -1,0 +1,26 @@
+
+.difficulty-card {
+   margin: 20px 0px;
+   padding: 0;
+}
+.difficulty-card:hover {
+   cursor: pointer;
+
+   .information-text {
+      background: linear-gradient(to left, var(--primary) 50%, var(--bg-contrast) 50%) right;
+      background-size: 220%;
+      color: white;
+      transition: 0.5s ease-out;
+   }
+}
+
+.main-difficulty {
+   padding: 20px;
+   font-size: 24px;
+   color: var(--primary);
+}
+
+.information-text {
+   padding: 5px;
+   background-color: var(--bg-contrast)
+}

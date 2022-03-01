@@ -1,0 +1,58 @@
+<div class="row" [class]="'score-table-for-'+ board.name">
+   <div class="col s12 name">
+      <div class="name center">
+         <span class="name-text">{{board.name}}</span>
+      </div>
+   </div>
+   <div class="col s3">
+      <div class="table-title">
+         Dificultad
+      </div>
+      <div *ngFor="let dificulty of board.scores">
+         <div class="row internal-row">
+            <div class="col s12">
+               {{dificulty.tag}}
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col s3">
+      <div class="table-title">
+         Aciertos
+      </div>
+      <div *ngFor="let score of board.scores">
+         <div class="row internal-row">
+            <div class="col s12">
+               {{score.right}}
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col s3">
+      <div class="table-title">
+         Fallos
+      </div>
+      <div *ngFor="let score of board.scores">
+         <div class="row internal-row">
+            <div class="col s12">
+               {{score.wrong}}
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col s3">
+      <div class="center table-title">
+         Porcentaje
+      </div>
+      <div *ngFor="let score of board.scores">
+         <div class="row internal-row">
+            <div class="col s12">
+               <div class="percentage center">
+                  <span>{{getPercentage(score.right, score.wrong)}}%</span>
+                  <mat-progress-bar mode="determinate" value="{{getPercentage(score.right, score.wrong)}}"> </mat-progress-bar>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

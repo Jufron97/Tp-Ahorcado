@@ -1,0 +1,48 @@
+<div>
+   <div>
+      <div class="letras-erradas-texto">
+         Letras erradas:
+      </div>
+      <div class="letras letras-erradas">
+         <app-letras-erradas
+            *ngFor="let letraErrada of letrasErradas()"
+            [letra]="letraErrada"
+         ></app-letras-erradas>
+      </div>
+   </div>
+   <div class="letras letras-juego">
+      <app-letras-juego *ngFor="let letra of palabraJuego()" [letra]="letra"></app-letras-juego>
+   </div>
+
+   <div class="inferior bottom">
+      <mat-form-field class="full-width-input" appearance="outline">
+         <mat-label>Arriesgar palabra</mat-label>
+         <input
+            class="name-selector-input"
+            matInput
+            [(ngModel)]="palabraAArriesgar"
+            (keydown.enter)="arriesgarPalabra(palabraAArriesgar)"
+         />
+      </mat-form-field>
+      <div class="section-button">
+         <span
+            matTooltip="Escriba una palabra para arriesgar"
+            [matTooltipDisabled]="palabraAArriesgar.length != 0"
+            matTooltipPosition="above"
+         >
+            <button
+               id="btn-arriesgar"
+               mat-raised-button
+               color="warn"
+               [disabled]="palabraAArriesgar.length === 0"
+               (click)="arriesgarPalabra(palabraAArriesgar)"
+            >
+               Arriesgar palabra
+            </button>
+         </span>
+         <button id="btn-pista" mat-raised-button color="primary" (click)="mostrarPista()">
+            Pedir pista!
+         </button>
+      </div>
+   </div>
+</div>

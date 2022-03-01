@@ -1,0 +1,18 @@
+<img src="{{imagePath()}}" alt="Ahorcado" class="ahorcado-image" [ngClass]="imageTheme"/>
+
+<div class="intentos-disponibles">
+   <p>Intentos disponibles: {{7-contadorVidas()}}</p>
+</div>
+
+<!-- Esto está aca solamente para que se carguen las imagenes una sola vez al iniciar
+    la partida. De esta manera, nos aseguramos que ya se tengan las imagenes cargadas
+    y no tengan que ir a buscarse cada vez que cambie la puntuación.
+
+    Esto es especialmente util, cuando el server es lento, como las versiones gratis de hosts.
+    Por ese motivo, se deja esta linea acá abajo.
+-->
+<div class="cached-images" style="display: none;">
+   <div *ngFor="let number of [0,1,2,3,4,5,6,7]">
+      <img src="{{getPathByNumber(number)}}" alt="Ahorcado" />
+   </div>
+</div>

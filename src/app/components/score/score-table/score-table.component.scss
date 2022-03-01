@@ -1,0 +1,36 @@
+@import "../../../../styles.scss";
+.table-title {
+   font-size: 16px;
+   font-weight: 500;
+   height: 40px;
+}
+
+.name {
+   background-color: var(--primary);
+   width: 100%;
+
+   .name-text {
+      font-weight: 500;
+      color: white;
+
+      text-orientation: upright;
+
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+   }
+
+   @media (max-width: 600px) {
+      .name-text {
+         writing-mode: horizontal-tb;
+      }
+   }
+}
+
+.continue-points {
+   writing-mode: horizontal-tb;
+}
+
+.internal-row {
+   min-height: 40px;
+}

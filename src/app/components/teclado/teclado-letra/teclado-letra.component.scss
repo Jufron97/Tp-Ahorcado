@@ -1,0 +1,67 @@
+.keyboard-letter {
+   // Tamaños y margenes
+   font-size: 20px;
+   margin: 3px;
+
+   padding: 20px;
+   width: 60px;
+   height: 60px;
+
+   // Para que no se puedan presionar las teclas
+   -webkit-user-select: none;
+   user-select: none;
+
+   position: relative;
+   background: #333;
+   text-align: center;
+   color: #eee;
+   float: left;
+   border-radius: 0.3em;
+
+   box-sizing: border-box;
+   cursor: pointer;
+
+   border: 1px solid #444;
+   box-shadow: 0 0.2em 0 0.05em #222;
+   border-bottom-color: #555;
+}
+
+.keyboard-letter.pressed {
+   background: #2a2a2a;
+   color: #aaa;
+   position: relative;
+   top: 0.2em;
+   box-shadow: 0 0 0 0.05em black;
+}
+.keyboard-letter.pressed:hover {
+   cursor: auto;
+}
+
+// Letras presionadas y (correctas/erradas).
+.keyboard-letter:hover {
+   background: rgb(78, 77, 77);
+}
+
+.keyboard-letter.pressed.wrong {
+   background: #793636;
+}
+.keyboard-letter.pressed.correct {
+   background: #526644;
+}
+
+@media (max-width: 700px) {
+    .keyboard-letter {
+       padding: 15px;
+       .span__letter {
+          font-size: 25px;
+       }
+    }
+ }
+@media (max-width: 500px) {
+   .keyboard-letter {
+      padding: 10px;
+      .span__letter {
+         font-size: 36px;
+      }
+   }
+}

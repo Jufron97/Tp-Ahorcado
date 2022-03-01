@@ -1,0 +1,3 @@
+<div class="keyboard-letter" (click)="press()" [ngClass]="{'pressed': isPressed(), 'correct': isCorrect(), 'wrong': isWrong()}" class="key-selector-{{letra}}">
+    <span class="span__letter"> {{letra}} </span>
+</div>

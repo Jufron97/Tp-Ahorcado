@@ -1,0 +1,38 @@
+<!-- Layout basico para el ahorcado -->
+<div class="dev-container">
+   <div class="flex-container">
+      <mat-card class="flex-item dibujo-ahorcado">
+         <app-dibujo-ahorcado></app-dibujo-ahorcado>
+      </mat-card>
+      <div class="flex-item palabras card">
+         <app-indicador-palabras></app-indicador-palabras>
+      </div>
+   </div>
+
+   <div class="parte-inferior">
+      <app-teclado></app-teclado>
+   </div>
+
+   <div class="hidden">
+      <div #laParca>
+         <div style="background: var(--bg);">
+            <img
+               [ngClass]="imageTheme"
+               src="assets/images/ahorcado/ahorcado-7.gif"
+               alt="Ahorcado"
+               width="350px"
+            />
+         </div>
+         <div class="la-parca">
+            <img
+               class="animate__animated animate__zoomInDown la-parca__img"
+               src="assets/images/la_parca.gif"
+               alt="La Parca"
+               width="350px"
+            />
+         </div>
+
+         <h3 class="swal2-html-container">Pulse continuar para jugar otra vez</h3>
+      </div>
+   </div>
+</div>

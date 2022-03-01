@@ -1,0 +1,32 @@
+<nav>
+   <div class="nav-wrapper container">
+      <a routerLink="name" class="brand-logo left">
+         <img src="assets/images/logo.png" alt="Logo" class="img-logo" />
+      </a>
+      <ul class="right">
+         <li>
+            <div class="nav-section" routerLink="name">
+               <mat-icon class="nav-section__icon" aria-hidden="false">assignment_ind</mat-icon>
+               <a class="nav-section__text"> Cambiar Nombre</a>
+            </div>
+         </li>
+         <li>
+            <div class="nav-section" routerLink="difficulty">
+               <mat-icon class="nav-section__icon">cached</mat-icon>
+               <a class="nav-section__text"> Reiniciar</a>
+            </div>
+         </li>
+         <li>
+            <div class="nav-section" routerLink="score">
+               <mat-icon class="nav-section__icon" aria-hidden="false">toc</mat-icon>
+               <a class="nav-section__text"> Puntajes</a>
+            </div>
+         </li>
+         <li>
+            <div class="nav-section" style="padding: 0px !important">
+               <app-color-switcher> </app-color-switcher>
+            </div>
+         </li>
+      </ul>
+   </div>
+</nav>

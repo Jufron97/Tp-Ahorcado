@@ -1,0 +1,31 @@
+<div class="container center">
+   <mat-card>
+      <div class="name-select-card">
+         <h1 class="welcome-message">
+            Bienvenido<span class="user-name" *ngIf="name != ''">, {{name}}</span>!
+         </h1>
+         <br />
+         <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Ingrese un nombre!</mat-label>
+            <input
+               class="name-selector-input"
+               matInput
+               [(ngModel)]="name"
+               autocomplete="off"
+               (keyup.enter)="selectName()"
+            />
+         </mat-form-field>
+         <br />
+         <div class="right">
+            <button
+               mat-raised-button
+               color="primary"
+               class="btn-select-name"
+               (click)="selectName()"
+            >
+               Elegir
+            </button>
+         </div>
+      </div>
+   </mat-card>
+</div>

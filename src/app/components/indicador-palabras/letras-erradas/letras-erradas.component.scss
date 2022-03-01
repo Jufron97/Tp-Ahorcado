@@ -1,0 +1,25 @@
+.letra-errada {
+   display: inline-block;
+   min-width: 50px;
+   height: 50px;
+   margin: 2px 2px;
+
+   text-align: center;
+
+   background-color: var(--bg-card-contrast);
+   font-size: 22px;
+
+   p {
+      margin: 0;
+      padding-top: 25%;
+      padding-bottom: 25%;
+   }
+}
+
+@media (max-width: 500px) {
+    .letra-errada{
+        min-width: 30px;
+        height: 40px;
+        font-size: 18px;
+    }
+ }

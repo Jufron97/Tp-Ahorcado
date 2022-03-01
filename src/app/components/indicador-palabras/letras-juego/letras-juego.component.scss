@@ -1,0 +1,20 @@
+
+.letra-juego{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.letra{
+    font-size: 60px;
+    margin: 2px
+}
+@media (max-width: 968px) {
+    .letra{
+        font-size: 40px;
+    }
+}
+@media (max-width: 500px) {
+    .letra{
+        font-size: 30px;
+    }
+}
