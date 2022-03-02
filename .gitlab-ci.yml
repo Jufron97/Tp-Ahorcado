@@ -66,10 +66,10 @@ heroku-deploy:
     - echo "Deployando a Heroku ..."
     - git remote -v
   script:
-    - git push https://seba.a.rossi+agiles:$HEROKU_API_KEY@git.heroku.com/agiles-grupo-5.git HEAD:master
+    - git push https://Jufron97:$HEROKU_API_KEY@git.heroku.com/agiles-grupo8.git HEAD:master
   after_script:
     - r="╔════════════════════════════════════════════════════════════════════╗"
-    - r="║          Deployado en https://agiles-grupo-5.herokuapp.com/        ║"
+    - r="║          Deployado en https://agiles-grupo8.herokuapp.com/        ║"
     - r="╚════════════════════════════════════════════════════════════════════╝"
   only:
     - master
@@ -91,7 +91,7 @@ sonarcloud-check:
     - sonar-scanner
   after_script:
     - r="╔════════════════════════════════════════════════════════════════════╗"
-    - r="║ analisis en https://sonarcloud.io/dashboard?id=sebarossi_apiagiles ║"
+    - r="║ analisis en https://sonarcloud.io/dashboard?id=jufron97-agiles ║"
     - r="╚════════════════════════════════════════════════════════════════════╝"
   dependencies: 
     - unitarios 
@@ -110,7 +110,7 @@ pages:
     - mv coverage/lcov-report/ public/
   after_script:
     - r="╔════════════════════════════════════════════════════════════════════╗"
-    - r="║   test coverage subido en https://sebarossi.gitlab.io/apiagiles/   ║"
+    - r="║   test coverage subido en https://jufron97.gitlab.io/tp-ahorcado/   ║"
     - r="╚════════════════════════════════════════════════════════════════════╝"
   artifacts:
     paths:
